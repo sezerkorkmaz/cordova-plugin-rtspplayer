@@ -1,4 +1,4 @@
-cordova-plugin-rtspplayer and ImageView.
+## cordova-plugin-rtspplayer
 
 ## Install
 
