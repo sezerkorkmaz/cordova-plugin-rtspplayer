@@ -15,4 +15,5 @@ Now you are ready to go
 
 ## Forked From
 
-https://github.com/flpwgr/rtsplayer
+[Felipe Wagner](https://github.com/flpwgr)
+
