@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="br.com.stek.rtsplayer" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+	<name>rtsplayer</name>
+	<js-module name="rtsplayer" src="www/rtsplayer.js">
+		<clobbers target="cordova.plugins.rtsplayer" />
+	</js-module>
+
+	<platform name="ios">
+		<config-file parent="/*" target="config.xml">
+			<feature name="rtsplayer">
+				<param name="ios-package" value="rtsplayer" />
+			</feature>
+		</config-file>
+
+		<header-file src="src/ios/rtsplayer.h" />
+		<source-file src="src/ios/rtsplayer.m" />
+		
+
+		<header-file src="src/ios/rtsplayerViewController.h" />
+		<source-file src="src/ios/rtsplayerViewController.m" />
+		<resource-file src="src/ios/rtsplayerViewController.xib" />
+
+		<header-file src="src/ios/FFFrameExtractor.h" />
+		<source-file src="src/ios/FFFrameExtractor.m" compiler-flags="-I/usr/local/FFMpegiOS/include/ -I/usr/local/FFMpegiOS/include/libavcodec/ -I/usr/local/FFMpegiOS/include/libavformat/ -I/usr/local/FFMpegiOS/include/libswscale/" />
+		
+
+		<framework src="libiconv.dylib" />
+		<framework src="libz.dylib" />
+		<framework src="libbz2.dylib" />
+		<framework src="CoreVideo.framework" />
+
+		<!-- FFMPEG releated -->
+		<source-file src="src/ios/FFMpegiOS/lib/libavcodec.a" framework="true" />
+		<source-file src="src/ios/FFMpegiOS/lib/libavdevice.a" framework="true" />
+		<source-file src="src/ios/FFMpegiOS/lib/libavfilter.a" framework="true" />
+		<source-file src="src/ios/FFMpegiOS/lib/libavformat.a" framework="true" />
+		<source-file src="src/ios/FFMpegiOS/lib/libavutil.a" framework="true" />
+		<source-file src="src/ios/FFMpegiOS/lib/libswresample.a" framework="true" />
+		<source-file src="src/ios/FFMpegiOS/lib/libswscale.a" framework="true" />
+	</platform>
+</plugin>
