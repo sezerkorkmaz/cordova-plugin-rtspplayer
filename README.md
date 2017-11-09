@@ -13,7 +13,3 @@ Now you are ready to go
  
 ```
 
-## Forked From
-
-[Felipe Wagner](https://github.com/flpwgr)
-
